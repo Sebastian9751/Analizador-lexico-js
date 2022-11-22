@@ -1,0 +1,86 @@
+
+body{
+   background: #2980B9;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #61b0d2, #77b6cd, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #2980B9, #99b4be, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   height: 100vh;
+}
+input{
+  font-family: 'Times New Roman', Times, serif;
+    color: rgb(230, 232, 111)  ;
+    font-style: oblique;
+    background-color: rgb(61, 61, 61);
+    border-radius:7px;
+}
+.error{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(230, 232, 111)  ;
+    font-style: oblique;
+  }
+ .succes{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(96, 193, 254);
+    font-style: oblique;
+    
+ }
+ .var{
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(96, 254, 217);
+  font-style: oblique;
+}
+ .search{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color:rgb(232, 145, 111) ;
+ }
+
+ .console{
+   margin-top: 9px;
+   margin-right: 8px;
+   margin-bottom: 9px;
+   border: 2px solid rgb(32, 31, 31);
+   background-color: rgb(61, 61, 61);
+   border-radius:7px;
+ }
+ .formulario{
+   margin-right: 8px;
+   margin-bottom: 9px;
+   margin-top: 9px;
+   border: 2px solid rgb(32, 31, 31);
+   border-radius:7px;
+   display: flex;
+  flex-direction: column;
+ }
+ .formulario textarea{
+   background-color:  rgb(61, 61, 61);
+   color: rgb(255, 255, 255);
+ }
+ .TablaLexico{
+  background-color: rgb(61, 61, 61);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color: rgb(230, 232, 111)  ;
+  font-style: oblique;
+ }
+ .LineaLexico{
+  background-color:  rgb(95, 94, 94);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-style: oblique;
+ }
+ .titulo{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  text-align: center;
+  margin-top: 30px;
+ }
+ .t2{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+ 

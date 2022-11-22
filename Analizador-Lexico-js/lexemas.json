@@ -1,0 +1,208 @@
+[
+    {
+        "nombre": "Fun",
+        "tipo": "Funcion",
+        "codigo":"01"
+    },
+    {
+        "nombre": "Ent",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "Sta",
+        "tipo": "Inicio de programa",
+        "codigo":"10"
+    },
+    {
+        "nombre": "Main",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "End",
+        "tipo": "Fin de programa",
+        "codigo":"10"
+    },
+    {
+        "nombre": "Static",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "void",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "if",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "else",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "Ciclo",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+   
+    {
+        "nombre": "imprimir",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "log",
+        "tipo": "reservada",
+        "codigo":"01"
+    },
+    {
+        "nombre": "0",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "1",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "2",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "3",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "4",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "6",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "7",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "8",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "9",
+        "tipo": "numero",
+        "codigo":"102"
+    },
+    {
+        "nombre": "::",
+        "tipo": "asignacion",
+        "codigo":"099"
+    },
+    {
+        "nombre": "(",
+        "tipo": "simbolo",
+        "codigo":"1"
+    },
+    {
+        "nombre": ")",
+        "tipo": "simbolo",
+        "codigo":"2"
+    },
+    {
+        "nombre": "{",
+        "tipo": "simbolo",
+        "codigo":"6"
+    },
+    {
+        "nombre": "=",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": "==",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": ">=",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": "<=",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": "!=",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": "!==",
+        "tipo": "simbolo",
+        "codigo":"8"
+    },
+    {
+        "nombre": ";",
+        "tipo": "simbolo / fin de linea",
+        "codigo":"05"
+    },
+    {
+        "nombre": ":",
+        "tipo": "simbolo",
+        "codigo":"4"
+    },
+    {
+        "nombre": "}",
+        "tipo": "simbolo",
+        "codigo":"7"
+    },
+    {
+        "nombre": ".",
+        "tipo": "simbolo",
+        "codigo":"3"
+    },
+    {
+        "nombre": "+",
+        "tipo": "operador",
+        "codigo":"03"
+    },
+    {
+        "nombre": "-",
+        "tipo": "operador",
+        "codigo":"03"
+    },
+    {
+        "nombre": "*",
+        "tipo": "operador",
+        "codigo":"03"
+    },
+    {
+        "nombre": "/",
+        "tipo": "operador",
+        "codigo":"03"
+    },
+    {
+        "nombre": "%",
+        "tipo": "operador",
+        "codigo":"03"
+    },
+    {
+        "nombre": "i",
+        "tipo": "identificador",
+        "codigo":"04"
+    }
+]

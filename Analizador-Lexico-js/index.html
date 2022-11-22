@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Analizador Lexico</title>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="container_form ">
+          <h1 class="titulo">Analizador lexico</h1>
+          <form id="container_codigo">
+            <h5 class="t2">Selecciona un archivo</h5>
+            <input  type="file" id="archivo">
+            <div class="formulario">
+              <textarea 
+              name="entrada"
+              placeholder="Code"
+              id="codigo"
+              cols="120"
+              rows="9"
+            ></textarea>
+            </div>
+            <div class="group-buttons">
+              <button type="submit" class="btn btn-ligh">Analizar</button>
+              <button type="reset" class="btn btn-ligh">Clear</button>
+            </div>
+          </form>
+          <h4 class="t2">Consola</h4>
+          <div class="console" id="111">
+            <h5 class="succes">Cosola</h5>
+          </div>
+          <div id="Sintaxis"></div>
+      </div>
+      <div class="container_lexico">
+        <h4 class="t2">Validacion de cracteres</h4>
+        <div id="CodeData" >
+          <table class="table" >
+            <thead class="thead-dark  LineaLexico">
+              <tr>
+                <th class="h4">Detalle</th>
+                <th class="h4">Tipo</th>
+                <th class="h4">Identificador</th>
+              </tr>
+            </thead>
+            <tbody id="datos" class="tabla"></tbody>
+          </table>
+          <br>
+        </div>
+      </div>
+      
+    </div>
+    <script src="./Logic.js"></script>
+  </body>
+  
+</html>
