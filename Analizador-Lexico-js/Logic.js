@@ -50,7 +50,7 @@ function validarEstructura(contenido) {
     } else if (item == main && bloque.indexOf(item) == 1) {
       console.log(item, ` CORRCTO TENGO EL INDICE `, bloque.indexOf(item));
       structure.innerHTML += `<h5 class="succes" > declaracion encontrada: " ${item} "</h5>`;
-      validarDeclaraciones(dividirBloque(codigo.value));
+      validarDeclaraciones(bloque);
     } else if (bloque.indexOf(item) >= 2) {
       console.log(item, " ESTO ES EL CUERPO DEL CODIGO ", bloque.indexOf(item));
       if (
@@ -190,19 +190,20 @@ function validarDeclaraciones(bloques) {
   let response = [];
   let result;
   let i = 0;
+  console.log("BLOQUE RECIBIDO PARA VALIDAR", bloques)
   for (let i = 0; i < bloques.length; i++) {
     const item = bloques[i];
     let result;
     if (item.startsWith("Ent")) {
-      if (item.match(/^Ent\s+\w+\s*=\s*\d+\s*$/g)) {
+      if (item.match(/^Ent\s*[^\d]\w+\s*=\s*\d+\s*$/)) {
         result = [
           i + 1,
-          `<h5 class="var">variable declarada correctamente  ${item}</h5>`
+          `<h5 class="var">variable declarada correctamente  ${item}</h5>`,
         ];
       } else {
         result = [
           i + 1,
-          `<h5 class="error">la declaracion "${item}" es incorrecta</h5>`
+          showError(item)
         ];
       }
     } else {
@@ -211,11 +212,20 @@ function validarDeclaraciones(bloques) {
     response.push(result);
     console.log("hola__", response);
   }
-  
+
   response.forEach((item) => {
     structure.innerHTML += `<h5 class="search" >${item[1]}  </h5>`;
   });
 }
+
+
+
+//Mostrar error
+const showError=(item)=>{
+  const result = `<h5 class="error">parace que tienes un error de sintaxix en  "${item}" es incorrecta</h5>`
+return  result
+}
+
 
 // agregando la accion al form
 cCodigo.addEventListener("submit", (event) => {
