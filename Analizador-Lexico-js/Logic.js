@@ -256,7 +256,7 @@ function validarCondicion(bloques) {
 
 //Mensaje succes
 const showSucces=(item)=>{
-  const result = `<h5 class="var">variable declarada correctamente  ${item}</h5>`
+  const result = `<h5 class="var">sentencia declarada correctamente  ${item}</h5>`
 return  result
 }
 //Mensaje error
