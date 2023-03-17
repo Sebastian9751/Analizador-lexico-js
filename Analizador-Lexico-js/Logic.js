@@ -52,6 +52,8 @@ function validarEstructura(contenido) {
       structure.innerHTML += `<h5 class="succes" > declaracion encontrada: " ${item} "</h5>`;
       validarDeclaraciones(bloque);
       validarCondicion(bloque);
+      validarWhile(bloque);
+      validarPrint(bloque);
     } else if (bloque.indexOf(item) >= 2) {
       console.log(item, " ESTO ES EL CUERPO DEL CODIGO ", bloque.indexOf(item));
       if (
@@ -191,21 +193,15 @@ function validarDeclaraciones(bloques) {
   let response = [];
   let result;
   let i = 0;
-  console.log("BLOQUE RECIBIDO PARA VALIDAR LISTO", bloques)
+  console.log("BLOQUE RECIBIDO PARA VALIDAR LISTO", bloques);
   for (let i = 0; i < bloques.length; i++) {
     const item = bloques[i];
     let result;
     if (item.startsWith("Ent")) {
       if (item.match(/^Ent\s*[^\d]\w+\s*=\s*\d+\s*$/)) {
-        result = [
-          i + 1,
-          showSucces(item)
-        ];
+        result = [i + 1, showSucces(item)];
       } else {
-        result = [
-          i + 1,
-          showError(item)
-        ];
+        result = [i + 1, showError(item)];
       }
     } else {
       result = [i + 1, "buscando declaraciones"];
@@ -219,18 +215,67 @@ function validarDeclaraciones(bloques) {
   });
 }
 
-
 //validar  IF
 function validarCondicion(bloques) {
   let response = [];
   let result;
   let i = 0;
-  console.log("BLOQUE RECIBIDO IF", bloques)
+  console.log("BLOQUE RECIBIDO IF", bloques);
   for (let i = 0; i < bloques.length; i++) {
     const item = bloques[i];
     let result;
     if (item.startsWith("if")) {
       if (item.match(/^if\([^)]+\)\{[^}]+\}$/g)) {
+        result = [i + 1, showSucces(item)];
+      } else {
+        result = [i + 1, showError(item)];
+      }
+    } else {
+      result = [i + 1, "buscando declaraciones"];
+    }
+    response.push(result);
+  }
+
+  response.forEach((item) => {
+    structure.innerHTML += `<h5 class="search" >${item[1]}  </h5>`;
+  });
+}
+
+// VALIDAR While
+
+function validarWhile(bloques) {
+  let response = [];
+  console.log("BLOQUE RECIBIDO WHILE", bloques);
+  for (let i = 0; i < bloques.length; i++) {
+    const item = bloques[i];
+    let result;
+    if (item.startsWith("while")) {
+      if (item.match(/^while\([^)]+\)\{[^}]+\}$/g)) {
+        result = [i + 1, showSucces(item)];
+      } else {
+        result = [i + 1, showError(item)];
+      }
+    } else {
+      result = [i + 1, "buscando declaraciones"];
+    }
+    response.push(result);
+  }
+
+  response.forEach((item) => {
+    structure.innerHTML += `<h5 class="search" >${item[1]}  </h5>`;
+  });
+}
+
+// validar print
+
+function validarPrint(bloques) {
+  let response = [];
+  console.log("BLOQUE RECIBIDO", bloques)
+  for (let i = 0; i < bloques.length; i++) {
+    const item = bloques[i].replace(/\\/g, ""); // elimina las diagonales invertidas
+    let result;
+    if (item.includes("print")) {
+      if (item.match(/^print\s*=\s*"[^"]+"$/)) {
         result = [
           i + 1,
           showSucces(item)
@@ -253,18 +298,18 @@ function validarCondicion(bloques) {
 }
 
 
+  
 
 //Mensaje succes
-const showSucces=(item)=>{
-  const result = `<h5 class="var">sentencia declarada correctamente  ${item}</h5>`
-return  result
-}
+const showSucces = (item) => {
+  const result = `<h5 class="var">sentencia declarada correctamente  ${item}</h5>`;
+  return result;
+};
 //Mensaje error
-const showError=(item)=>{
-  const result = `<h5 class="error">parace que tienes un error de sintaxix en  "${item}" es incorrecta</h5>`
-return  result
-}
-
+const showError = (item) => {
+  const result = `<h5 class="error">parace que tienes un error de sintaxix en  "${item}" es incorrecta</h5>`;
+  return result;
+};
 
 // agregando la accion al form
 cCodigo.addEventListener("submit", (event) => {
